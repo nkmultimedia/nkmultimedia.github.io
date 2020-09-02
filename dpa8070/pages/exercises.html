@@ -30,6 +30,9 @@
     .width-49{
         width: 49%;
     }
+    .width-120 {
+        width: 120%;
+    }
     .height-150 {
         height: 150px;
     }
@@ -63,6 +66,60 @@
         <p class="w3-xlarge">Niranjan Kalyanasundaram</p>
 
     </header>-->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <p>
+            Jump to exercise:
+            <a href="#ex1">1</a>
+            <a href="#ex2">2</a>
+            <a href="#ex3">3</a>
+        </p>
+    </div>
+    <!-- Third Grid -->
+    <div class="w3-row-padding w3-container" id="ex3">
+        <div class="w3-content">
+
+            <h1>Exercise 3: Lemon Squeezer</h1>
+            <h5 class="w3-padding-32">Problem: Create a detailed model of a lemon squeezer</h5>
+
+            <p class="w3-text-grey">
+                I started out by creating a cylinder to model the squeezer. I had start and restart a few times to figure out how to get the propper shape. I ended up extruding faces to create the indentation of the squeezer, and added edge loops to pull the sharp edges out. Creating the base was a lot easier, and just involved adding edge loops and moving vertices. I then went back and cleaned up the model to make sure I didn't have any ngons or triangles.
+            </p>
+            <h5>
+                <a href="../assets/ex3/KalyanasundaramNiranjan_DPA8070_Ex3.zip">Download Project Files</a>
+            </h5>
+            <div class="w3-center">
+                <img src="../assets/ex3/img/Squeezer-Side.jpg" alt="Squeezer-Side" class="w3-round height-150" />
+                <img src="../assets/ex3/img/Squeezer-Top.jpg" alt="Squeezer-Top" class="w3-round height-150" />
+                <img src="../assets/ex3/img/Squeezer-PerspectiveShaded.jpg" alt="Squeezer-PerspectiveShaded" class="w3-round height-150" />
+            </div>
+            <div class="w3-center w3-padding">
+                <img src="../assets/ex3/img/Squeezer-PerspectiveRough.jpg" alt="Squeezer-PerspectiveRough" class="w3-round width-49" />
+                <img src="../assets/ex3/img/Squeezer-PerspectiveWireframe.jpg" alt="Squeezer-PerspectiveWireframe" class="w3-round width-49" />
+            </div>
+
+        </div>
+    </div>
+   
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-light-grey w3-container" id="ex2">
+        <div class="w3-content">
+            <!--Insert Exercise 2-->
+            <h1>Exercise 2: Planets</h1>
+            <h5 class="w3-padding-32">Problem: Create a solar system with a sun, planets and moons. Animated the planets and moons to rotate and orbit as required</h5>
+
+            <p class="w3-text-grey">
+                For this assignment, I decided to stick to spheres (and a torus for Saturn's ring) and use textures to distinguish between the different planets and moons. I found texture maps for these objects from various sources online, and applied them as the color map on lambert shaders. I decided to avoid using manual keyframes for the animation. Instead, I felt that I could save a lot of time by using expressions to control the rotation. I had all the planets and moons grouped in a way that made it easy to add expressions appropriately. All the objects rotate and orbit at unique speeds.
+            </p>
+            <h5>
+                <a href="../assets/ex2/KalyanasundaramNiranjan_DPA8070_Ex2.zip">Download Project Files</a>
+            </h5>
+            <div class="w3-center">
+                <img src="../assets/ex2/img/Hypergraph.png" alt="Hypergraph" class="w3-round width-120" />
+                <iframe width="700" height="315" class="w3-padding" src="https://www.youtube.com/embed/Vsi59tUkgjk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
     <!-- First Grid -->
     <div class="w3-row-padding w3-padding-64 w3-container" id="ex1">
         <div class="w3-content">
@@ -95,45 +152,8 @@
         </div>
     </div>
 
-    <!-- Second Grid -->
-    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="ex2">
-        <div class="w3-content">
-            <!--Insert Exercise 2-->
-        </div>
-    </div>
 
-    <!-- Third Grid -->
-    <div class="w3-row-padding w3-padding-64 w3-container" id="ex3">
-        <div class="w3-content">
 
-            <h1>Exercise 3: Lemon Squeezer</h1>
-            <h5 class="w3-padding-32">Problem: Create a detailed model of a lemon squeezer</h5>
-
-            <p class="w3-text-grey">
-                I started out by creating a cylinder to model the squeezer. I had start and restart a few times to figure out how to get the propper shape. I ended up extruding faces to create the indentation of the squeezer, and added edge loops to pull the sharp edges out. Creating the base was a lot easier, and just involved adding edge loops and moving vertices. I then went back and cleaned up the model to make sure I didn't have any ngons or triangles.
-            </p>
-            <h5>
-                <a href="../assets/ex3/KalyanasundaramNiranjan_DPA8070_Ex3.zip">Download Project Files</a>
-            </h5>
-            <div class="w3-center">
-                <img src="../assets/ex3/img/Squeezer-Side.jpg" alt="Squeezer-Side" class="w3-round height-150" />
-                <img src="../assets/ex3/img/Squeezer-Top.jpg" alt="Squeezer-Top" class="w3-round height-150" />
-                <img src="../assets/ex3/img/Squeezer-PerspectiveShaded.jpg" alt="Squeezer-PerspectiveShaded" class="w3-round height-150" />
-                <!--<img src="../assets/ex3/img/arm.jpg" alt="Arm" class="w3-round height-150" />-->
-            </div>
-            <div class="w3-center w3-padding">
-                <img src="../assets/ex3/img/Squeezer-PerspectiveRough.jpg" alt="Squeezer-PerspectiveRough"class="w3-round width-49" />
-                <img src="../assets/ex3/img/Squeezer-PerspectiveWireframe.jpg" alt="Squeezer-PerspectiveWireframe" class="w3-round width-49" />
-                <!--<img src="../assets/ex1/img/Side.png" style="height:275px;" alt="Side" class="w3-round" />-->
-            </div>
-
-            <!--<div class="w3-center">
-                <img src="../assets/ex1/img/Perspective-shaded.png" class="w3-round" style="height: 600px;" alt="Perspective-shaded" />
-                <img src="../assets/ex1/img/Perspective.png" class="w3-round" style="height: 600px;" alt="Perspective-shaded" />
-            </div>-->
-
-        </div>
-    </div>
 
     <footer class="w3-container w3-black w3-center w3-opacity w3-padding-16">
         <!--<h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>-->
