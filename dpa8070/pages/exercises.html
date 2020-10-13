@@ -30,6 +30,9 @@
     .width-49{
         width: 49%;
     }
+    .width-75 {
+        width: 75%;
+    }
     .width-120 {
         width: 120%;
     }
@@ -96,11 +99,33 @@
                 animation should be about 30-90 frames long).
                 Render your scene.
             </h5>
-
+            <div class="w3-center">
+                <a href="../assets/ex10/img/sample_render.jpg" target="_blank">
+                    <img src="../assets/ex10/img/sample_render.jpg" alt="sample_render" class="w3-round width-75" />
+                </a>
+            </div>
             <p class="w3-text-grey">
-                I began the process by creating UV layouts for the pumpkin, Snoopy, and Woodstock. This allowed me to use Photoshop to paint color maps. I tried to replicate the grime and degradation from the actual object (It’s about 15 years old). I used 3 point lighting to light the scene. I used a directional light for the key light, a point light for fill, and an area light for the rim light. I played around with the lights individually to get decent lighting. I then proceeded to add bump maps to the surfaces. I used Maya mountain textures for Woodstock, and created my own bump maps for the other objects based on their color maps. For the base surface, I used another mountain texture for diffuse and bump maps.
-            </p>
+                I began the process by creating UV layouts for the pumpkin, Snoopy, and Woodstock. This allowed me to use Photoshop to paint color maps. I tried to replicate the grime and degradation from the actual object (It’s about 15 years old). I used 3 point lighting to light the scene. I used a directional light for the key light, a point light for fill, and an area light for the rim light. I played around with the lights individually to get decent lighting. I then proceeded to add bump maps to the surfaces. I used Maya mountain textures for Woodstock, and created my own bump maps for the other objects based on their color maps. For the base surface, I used another mountain texture for diffuse and bump maps. I used Nuke to run the image sequence and create the ping-pong playback.
+                <br />
+                Render settings:
+                <ul>
+                    <li>Render format: Half-precision EXR</li>
+                    <li>Render: Arnold</li>
+                    <li>Samples:</li>
+                    <ul>
+                        <li>Camera: 3</li>
+                        <li>Diffuse: 3</li>
+                        <li>Specular: 5</li>
+                        <li>Transission: 2</li>
+                        <li>SSS: 2</li>
+                        <li>Volume Indirect: 2</li>
+                    </ul>
 
+                </ul>
+            </p>
+            <div class="w3-center">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RDa79mt75AQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
             <h5>
                 <a href="../assets/ex10/KalyanasundaramNiranjan_DPA8070_Ex10.zip">Download Project Files</a>
             </h5>
