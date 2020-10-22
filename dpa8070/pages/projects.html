@@ -31,7 +31,9 @@
     .width-49 {
         width: 49%;
     }
-
+    .width-66{
+        width: 66%;
+    }
     .width-120 {
         width: 120%;
     }
@@ -42,6 +44,20 @@
 
     .height-250 {
         height: 250px;
+    }
+
+    .fit-width {
+        width: 100%;
+    }
+
+    .margin-top-0 {
+        margin-top: 0px;
+    }
+    .flex{
+        display: flex;
+    }
+    .large{
+        font-size: large;
     }
 </style>
 <body>
@@ -73,10 +89,99 @@
         <p>
             Jump to project:
             <a href="#pr1">1</a>
+            <a href="#pr2">2</a>
         </p>
     </div>
 
-    <!-- Fifth Grid -->
+    <!-- Project 1 -->
+    <div class="w3-row-padding w3-padding-64  w3-container" id="pr2">
+        <div class="w3-content">
+
+            <h1>Project 2: Replicating a Scene</h1>
+            <h6>
+                <em>Oct 21st, 2020</em>
+            </h6>
+            <h5 class="w3-padding-16">
+                For this project, you must recreate a picture as accurately as you can, creating the models, shaders, textures, and lighting.
+                Please choose a picture of adequate difficulty. The picture should include some
+                modeling tasks but not too many (a few marbles is too little, avoid vegetation or
+                real persons), at least 4 interesting shaders/textures, and not just diffuse light.
+                Please create the models, shaders/textures and lights, and render your scene.
+                Render your scene from the perspective of the picture and from three different
+                perspectives. The minimum pixel size is 800x600.
+            </h5>
+
+            <p class="w3-text-grey">
+                I wanted to pick a scene that was easy to model and allow me to focus on the lighting and shading. I chose not to create the pear because I didn't want to bite off more than I can chew. I hoped that by narrowing the scope of the project, I could deliver a more realistic image (rather than attempting to recreating everything and falling short of photorealism). I started by modeling all of the objects in the scene. The cutlery was a lot more challenging than I had expected. I manually unwrapped the plates, placemat, and tablecloths. When modeling the plates and placemat, I chose to leave out the detailed patterns and keep the mesh simple. I used automatic mapping for the cutlery because I planned to use procedural shading for those objects. I started creating lights and applying shaders. I found an HDRI to use for environment lighting. I played with its warmth in Photoshop to try and match the temperature in the reference image. I kept adding and deleting different lights and playing with their colors to try to match the image. I then went back to shading and prepared the texture maps wherever needed. For the plates, I painted a custom displacement map to create fancy patterns. To texture the placement, I found an image on
+                <a class="w3-text-indigo" href="https://www.potterybarn.com/products/tava-flat-round-charger/?catalogId=84" target="_blank">Pottery Barn's</a>
+                online store that I liked. I used that for the diffuse color and painted a displacement map to match it. I downloaded cloth texture maps from Quixel. I played with standard Arnold shaders for the silverware and used fractal noise to add bum and roughness to it. The final scene has 4 lights (1 directional, 1 HDRI environment, and 2 Arnold area lights with a bluish tint).
+            </p>
+            <h5 class="w3-padding-16">
+                <a href="../assets/pr1/KalyanasundaramNiranjan_DPA8070_Pr2.zip">Download Project Files and Images</a>
+            </h5>
+            <!-- Main images -->
+            <div class="w3-padding-16 w3-center">
+                <a href="../assets/pr2/img/reference.jpg" target="_blank">
+                    <img src="../assets/pr2/img/reference.jpg" alt="reference" class="w3-round fit-width" />
+                </a>
+                <p class="margin-top-0 large w3-text-grey">Reference</p>
+                <div class="w3-padding-16">
+                    <a href="../assets/pr2/img/render/main.jpg" target="_blank" class="w3-padding-16">
+                        <img src="../assets/pr2/img/render/main.jpg" alt="render_main" class="w3-round fit-width" />
+                    </a>
+                </div>
+
+                <a href="../assets/pr2/img/render/persp1.jpg" target="_blank">
+                    <img src="../assets/pr2/img/render/persp1.jpg" alt="render_persp1" class="w3-round width-33" />
+                </a>
+                <a href="../assets/pr2/img/render/persp2.jpg" target="_blank">
+                    <img src="../assets/pr2/img/render/persp2.jpg" alt="persp2" class="w3-round width-33" />
+                </a>
+                <a href="../assets/pr2/img/render/persp3.jpg" target="_blank">
+                    <img src="../assets/pr2/img/render/persp3.jpg" alt="persp3" class="w3-round width-33" />
+                </a>
+                <p class="margin-top-0 large w3-text-grey">Renders</p>
+            </div>
+
+            <!-- Detailed images -->
+            <div class="w3-center">
+                <a href="../assets/pr2/img/shader_networks.jpg" target="_blank">
+                    <img src="../assets/pr2/img/shader_networks.jpg" alt="shader_networks" class="w3-round fit-width" />
+                </a>
+                <p class="margin-top-0 large w3-text-grey">Shader Networks</p>
+            </div>
+            <div class="w3-center">
+                <a href="../assets/pr2/img/maps/maps_placemat.jpg" target="_blank">
+                    <img src="../assets/pr2/img/maps/maps_placemat.jpg" alt="maps_placemat" class="w3-round width-66" />
+                </a>
+                <a href="../assets/pr2/img/maps/maps_plate.jpg" target="_blank">
+                    <img src="../assets/pr2/img/maps/maps_plate.jpg" alt="maps_plate" class="w3-round width-33" />
+                </a>
+                <div class="flex w3-text-grey">
+                    <div class="width-66">Placemat</div>
+                    <div class="width-33">Plates</div>
+                </div>
+                <div class="w3-padding-16">
+                    <a href="../assets/pr2/img/maps/maps_tablecloth.jpg" target="_blank">
+                        <img src="../assets/pr2/img/maps/maps_tablecloth.jpg" alt="maps_tablecloth" class="w3-round fit-width" />
+                    </a>
+                    <p class="w3-text-grey">Cloth</p>
+                    <p class="margin-top-0 large w3-text-grey">Texture Maps</p>
+                </div>
+            </div>
+            <div class="w3-center">
+                <a href="../assets/pr2/img/uv_checker.jpg" target="_blank">
+                    <img src="../assets/pr2/img/uv_checker.jpg" alt="uv_checker" class="w3-round width-49" />
+                </a>
+                <a href="../assets/pr2/img/scene.jpg" target="_blank">
+                    <img src="../assets/pr2/img/scene.jpg" alt="scene" class="w3-round width-49" />
+                </a>
+                <p class="margin-top-0 large w3-text-grey">Scene</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 1 -->
     <div class="w3-row-padding w3-padding-64  w3-container" id="pr1">
         <div class="w3-content">
 
