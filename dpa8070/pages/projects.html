@@ -45,6 +45,9 @@
     .height-250 {
         height: 250px;
     }
+    .padding-left {
+        padding-left: 6px;
+    }
 
     .fit-width {
         width: 100%;
@@ -90,10 +93,82 @@
             Jump to project:
             <a href="#pr1">1</a>
             <a href="#pr2">2</a>
+            <a href="#pr3">3</a>
         </p>
     </div>
+    <!-- Project 2 -->
+    <div class="w3-row-padding w3-padding-64  w3-container" id="pr2">
+        <div class="w3-content">
 
-    <!-- Project 1 -->
+            <h1>Project 3: Bringing a Unicycle to Life</h1>
+            <h6>
+                <em>Oct 21st, 2020</em>
+            </h6>
+            <h5 class="w3-padding-16">
+                For this project, you must create an animation of a unicycle lasting 10-20 seconds. A unicycle is available for you to animate. You are not required to create an elaborate
+                environment, but you should include at least a ground plane to give the animated object a basis in space.
+                The unicycle has to be shaded/textured. Please create adequate lighting for the scene. The final movie should be composed of rendered frames (minimum 800x600) and saved in a
+                standard format (e.g., .mov). Audio is not required.
+                Create a rig to animate your unicycle. You are free to be as creative as you like with the animation. Try to make the final product entertaining (e.g., by making the object
+                roll, hop, jump, flip, etc.). Also, incorporate some of the Disney 12
+                animation principles (e.g., squash and stretch, exaggeration, anticipation, etc.).
+                As always, have fun with this project!
+
+            </h5>
+
+            <p class="w3-text-grey">
+                Since we were asked to animate a full 20 seconds, I decided to come up with a very short story that follows the structure of <strong>setup, conflict, climax, resolution</strong>. I chose to have 2 unicycles to make the story more interesting. I began the process by storyboarding the clip to figure out the characters, storytelling poses, and camera angles. I tried to position the shots in angles that support the narrative I was trying to convey. I then started rigging with this animation in mind, so that I could save time without creating unnecessary functionality.<br /><br />
+
+                I created a fairly simple cartoonic rig using a skeleton setup to bend the unicycle in the style of rubber hose cartoons. I set up one global control, one move controller, and several rotation controllers to control the orientation of the spine on a per-joint basis. I added an expression to make the tire automatically rotate when translating the model. I also used non-linear squash deformers to independently control squash and stretch on different segments of the unicycle, and one more to handle squashing the entire unicycle as a whole. This effect was very useful during the jump sequence, especially on the tire animation.<br /><br />
+
+
+                With the animation, my main focus was to give the two unicycles distinct personalities. I created a simple environment, blocked out the key animation poses, added inbetweens wherever I thought they were necessary and manipulated the spines a bit to get the desired movement. I tried to adhere to the principles of <strong>squash, arcs, anticipation, secondary action, and staging</strong>. Finally, I applied some basic shaders and skydome lighting and rendered the scene with Arnold. I did a very basic pass of color correction on the renders in Nuke, just to saturate the muted colors a bit more.<br /><br />
+
+            </p>
+            <h5 class="w3-padding-16">
+                <a href="../assets/pr3/KalyanasundaramNiranjan_DPA8070_Pr3.zip">Download Project Files and Images</a>
+            </h5>
+            <!-- Main images -->
+            <div class="w3-padding-16 w3-center">
+                <div class="w3-center">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2Id61gVZRsk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div><br />
+
+                <a href="../assets/pr3/img/storyboard/UnicycleStunt_p1.jpg" target="_blank">
+                    <img src="../assets/pr3/img/storyboard/UnicycleStunt_p1.jpg" alt="UnicycleStunt_p1" class="w3-round width-49" />
+                </a>
+                <a href="../assets/pr3/img/storyboard/UnicycleStunt_p2.jpg" target="_blank">
+                    <img src="../assets/pr3/img/storyboard/UnicycleStunt_p2.jpg" alt="UnicycleStunt_p2" class="w3-round padding-left width-49" />
+                </a>
+                <p class="margin-top-0 large w3-text-grey">Rough Storyboards</p><br />
+
+                <a href="../assets/pr3/img/rig.jpg" target="_blank">
+                    <img src="../assets/pr3/img/rig.jpg" alt="render_persp1" class="w3-round fit-width" />
+                </a>
+                <p class="margin-top-0 large w3-text-grey">Rig</p>
+                <div class="w3-padding-16">
+                    <a href="../assets/pr3/img/render/shot1.jpg" target="_blank">
+                        <img src="../assets/pr3/img/render/shot1.jpg" alt="shot1" class="w3-round width-33" />
+                    </a>
+                    <a href="../assets/pr3/img/render/shot1.jpg" target="_blank">
+                        <img src="../assets/pr3/img/render/shot7.jpg" alt="shot1" class="w3-round width-33" />
+                    </a>
+                    <a href="../assets/pr3/img/render/shot1.jpg" target="_blank">
+                        <img src="../assets/pr3/img/render/shot9.jpg" alt="shot1" class="w3-round width-33" />
+                    </a>
+                </div>
+
+                <a href="../assets/pr3/img/render/JumpSequence.jpg" target="_blank">
+                    <img src="../assets/pr3/img/render/JumpSequence.jpg" alt="JumpSequence" class="w3-round fit-width" />
+                </a>
+                <p class="margin-top-0 large w3-text-grey">Renders</p>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <!-- Project 2 -->
     <div class="w3-row-padding w3-padding-64  w3-container" id="pr2">
         <div class="w3-content">
 
