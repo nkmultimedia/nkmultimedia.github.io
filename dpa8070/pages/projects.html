@@ -31,9 +31,11 @@
     .width-49 {
         width: 49%;
     }
-    .width-66{
+
+    .width-66 {
         width: 66%;
     }
+
     .width-120 {
         width: 120%;
     }
@@ -45,6 +47,7 @@
     .height-250 {
         height: 250px;
     }
+
     .padding-left {
         padding-left: 6px;
     }
@@ -56,11 +59,16 @@
     .margin-top-0 {
         margin-top: 0px;
     }
-    .flex{
+
+    .flex {
         display: flex;
     }
-    .large{
+
+    .large {
         font-size: large;
+    }
+    .smaller {
+        font-size: smaller
     }
 </style>
 <body>
@@ -94,8 +102,127 @@
             <a href="#pr1">1</a>
             <a href="#pr2">2</a>
             <a href="#pr3">3</a>
+            <a href="#pr4">4</a>
         </p>
     </div>
+    <!-- Project 4 -->
+    <div class="w3-row-padding w3-padding-64  w3-container" id="pr4">
+        <div class="w3-content">
+
+            <h1>Project 4: Final Project</h1>
+            <h6>
+                <em>Dec 4th, 2020</em>
+            </h6>
+            <h5 class="w3-padding-16">
+                For this project, you must create a short animation, lasting 5-20 seconds. You need to choose a focus: advanced modeling, advanced texturing/shading/lighting/rendering, ad-vanced animation, advanced rigging, or eﬀects. Your project needs to either explore a topic we did not tackle in a class project or go beyond what we did in a previous project. Make sure to not just follow a tutorial but to create something on your own. You can use any of our previous models (or ﬁnd other assets but always cite your sources). Your ﬁnal movie should be saved in standard format (e.g., .mov), minimum size 800x600 but 1024x768 is preferred.
+                <ul>
+                    <li>Create a rig for a complex character</li>
+                    <li>Animate a quadruped character in an interesting setting</li>
+                    <li>Create a Rube Goldberg machine using dynamics</li>
+                    <li>Model a character with interesting fur or hair</li>
+                </ul>
+            </h5>
+
+            <div class="w3-center">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/gsfTk1u8bto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>
+                    Note: YouTube's compression has greatly modified the colors and gradients in this video.
+                    <a href="../assets/pr4/KalyanasundaramNiranjan_DPA8070_Pr4.mp4" target="_blank">
+                        <strong>Download a high quality video here</strong>
+                    </a>
+                </p>
+            </div>
+            <h5 class="w3-padding-16">
+                <a href="../assets/pr4/KalyanasundaramNiranjan_DPA8070_Pr4.zip">Download Project Files and Images</a>
+            </h5>
+            <p class="w3-text-grey">
+                For this project, I wanted to play FX. I decided to make a candelabra and simulate the flames on each candle using Maya fluids. I modeled the candelabra primarily using NURBS tools for the basic forms, converting them to polygonal meshes, and further refining the model from there. I simulated the flame and smoke independently using 2 separate fluid containers. I played around with the turbulence settings in the container and emitter to create a sense of wind. I then keyed various attributes to animate over time. My goal was to have the candle light up, let the flame sit still and steady for a bit, slowly turn up the illusion of a gust of wind, and then have the fire blow off and let the smoke rise.
+            </p>
+            <div class="w3-center">
+                <a href="../assets/pr4/img/screenshots/candelabra.jpg" target="_blank">
+                    <img src="../assets/pr4/img/screenshots/candelabra.jpg" alt="Candelabra" class="w3-round width-49" />
+                </a>
+                <p class="margin-top-0 smaller w3-text-grey">Model</p>
+            </div>
+
+            <p class="w3-text-grey">
+                Once I managed to get this done, I cached out the simulations using nCache and proceeded to duplicate the fluid containers for the other candles. Unfortunately, for some reason, I couldn’t manage to get the keyframes to duplicate, so I had to manually rekey the animation. It’s at this point that I realized, with the same keys, the simulation looked exactly the same for both flames that I had created till now. Adding external wind would’ve made this process much easier, but instead, I decided to simply stagger my keyframes around a bit, and mess with the values in each to create a sense of organic disturbances. I continued to recache this new simulation and repeated the process for all 5 candles.
+            </p>
+            <div class="w3-center">
+                <a href="../assets/pr4/img/screenshots/lightSetup.png" target="_blank">
+                    <img src="../assets/pr4/img/screenshots/lightSetup.png" alt="lightSetup" class="w3-round width-66" />
+                </a>
+                <p class="margin-top-0 smaller w3-text-grey">Light Setup</p>
+            </div>
+
+            <p class="w3-text-grey">
+                I had a lot of fun experimenting with the lighting. I wanted to try adding atmospheric fog to set a creepier mood to the scene. While playing around with the fog, I couldn’t help pass up the opportunity for a very dramatically lit scene. Eventually, I ended up going with a sort of dark, external moonlight ambiance. I had a spotlight shining down at an angle, a very subtle fill light off to the side. Of course, the flames were emissive as well, but not quite enough to sell the shot. So I added a disk light dead center to push the glow from the firelight. Since the camera was moving, I had to have this light move around in sync to keep the glow positioned at the center of the candelabra. I then realized that the candlelight needed to flicker and shut off with the flames. To do this, I added an expression to the glow light.
+            </p>
+            <div class="w3-center">
+                <a href="../assets/pr4/img/lightTest.png" target="_blank">
+                    <img src="../assets/pr4/img/lightTest.png" alt="lightTest" class="w3-round fit-width" />
+                </a>
+                <p class="margin-top-0 smaller w3-text-grey">Lighting Tests</p>
+            </div>
+
+            <p class="w3-text-grey">
+                I finally rendered my sequence, which took days to finish. I included a few AOVs that I felt would be useful for compositing. (The AOV images shown below have been modified to an 8-bit color space, and have been compressed for the web). I used nuke to play with the image a little bit, without being over the top about it. The main changes I made were reducing the specularity from the candelabra, tweaking the light color, brightened up the candlesticks, shifted the hue at the tip of the candles to make it a bit warmer, and (unsurprisingly), play with the glow. I turned up the glow just a little bit and played with the flickering even more here. Again, I used a simple expression with a sign function to automate the flickering.
+            </p>
+            <div class="w3-center">
+                <a href="../assets/pr4/img/aov.png" target="_blank">
+                    <img src="../assets/pr4/img/aov.png" alt="aov" class="w3-round fit-width" />
+                </a>
+                <p class="margin-top-0 smaller w3-text-grey">AOVs</p>
+            </div>
+            <div class="w3-center">
+                <a href="../assets/pr4/img/screenshots/nuke.png" target="_blank">
+                    <img src="../assets/pr4/img/screenshots/nuke.png" alt="nuke" class="w3-round fit-width" />
+                </a>
+                <p class="margin-top-0 smaller w3-text-grey">Nuke Node Graph</p>
+            </div>
+
+            <p class="w3-text-grey">
+                After rendering out the final comp, I realized that one of my fluids wasn’t animating. In a random caching issue, one of the smokes held a single pose for the final 130 frames. I went back, and recached this simulation, and re-rendered those frames of just that 1 candle, and patched it back into the comp to fix this problem.
+            </p>
+            <div class="w3-center">
+                <a href="../assets/pr4/img/screenshots/smokeComp.png" target="_blank">
+                    <img src="../assets/pr4/img/screenshots/smokeComp.png" alt="smokeComp" class="w3-round fit-width" />
+                </a>
+                <p class="margin-top-0 smaller w3-text-grey">Recompositing</p>
+            </div>
+
+            <br /><br />
+            <div>
+                The final render uses:
+                <ul>
+                    <li> 10 fluids </li>
+                    <li>
+                        3 to 8 lights:
+                        <ul>
+                            <li> 1 spotlight </li>
+                            <li> 2 area lights </li>
+                            <li> 5 emissive fluids</li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="w3-center">
+                <a href="../assets/pr4/img/renders/render_01.png" target="_blank">
+                    <img src="../assets/pr4/img/renders/render_01.png" alt="render_01" class="w3-round width-49" />
+                </a>
+                <a href="../assets/pr4/img/renders/render_02.png" target="_blank">
+                    <img src="../assets/pr4/img/renders/render_02.png" alt="render_02" class="w3-round width-49" />
+                </a>
+                <a href="../assets/pr4/img/renders/render_03.png" target="_blank">
+                    <img src="../assets/pr4/img/renders/render_03.png" alt="render_03" class="w3-round fit-width w3-margin-top" />
+                </a>
+                <p class="margin-top-0 smaller w3-text-grey">Final Frames</p>
+            </div>
+
+        </div>
+    </div>
+
     <!-- Project 3 -->
     <div class="w3-row-padding w3-padding-64  w3-container" id="pr3">
         <div class="w3-content">
@@ -164,7 +291,7 @@
                 <p class="margin-top-0 large w3-text-grey">Renders</p>
             </div>
 
-            
+
         </div>
     </div>
 
