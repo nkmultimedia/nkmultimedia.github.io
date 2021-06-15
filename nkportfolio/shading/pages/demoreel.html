@@ -1,0 +1,36 @@
+<!doctype html><title>Portfolio</title><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href=../../assets/favicon.png><link rel=stylesheet href=../../assets/fonts/titillium-web.min.css><link rel=stylesheet href=../../assets/fonts/font-awesome/5.1/css/font-awesome-5.1.0.css><body class="w3-light-grey w3-content" style=max-width:1600px><nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style=z-index:3;width:300px id=mySidebar><br><div class=w3-container><a href=# onclick=createRipple(this,event),nk.w3_close() class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu"><i class="fa fa-remove"></i></a><img id=menu-img class=w3-round><br><br><h4 class=center-align><b id=menu-header></b></h4></div><div class=w3-bar-block id=menu-container></div><div class="w3-panel w3-large" id=social-icons-container></div></nav><div class="w3-overlay w3-hide-large w3-animate-opacity" onclick=createRipple(this,event),nk.w3_close() style=cursor:pointer title="close side menu" id=myOverlay></div><div class=w3-main style=margin-left:300px><header><a href=#><img id=menu-img-mobile class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a><span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick=createRipple(this,event),nk.w3_open()><i class="fa fa-bars"></i></span><div class=w3-container><h1><b id=page-header></b></h1><button class="w3-button w3-teal w3-padding-large pull-right" style=margin-top:-40px onclick=createRipple(this,event),window.open(nk.constants.demoreelHQ.basePath+nk.constants.demoreelHQ.fileName)><i class="fa fa-download w3-margin-right"></i>Demo Reel (HQ)</button><em>Please use Google Chrome for best viewing experience</em></div></header><hr><h4 class=category-header>Shading</h4><hr><p class=padding-left-10>This is my shading demo reel as of December 2020. Please note that compression artifacts are present in the video. This in an unfortunate consequence of streaming. You may find uncompressed frames on the &nbsp;<a href=./lighting.html class=w3-teal-color>Shading & Lighting</a>&nbsp; page. Thank you for your understanding.<br><br><a href=https://nkmultimedia.github.io/nkportfolio/assets/videos/Nkportfolio_ShadingDemoReel.mp4 target=_blank class=w3-teal-color>STREAM DEMO REEL</a><br><br><strong>Tools Used:</strong><ul><li>OpenGL / GLSL<li>Autodesk Maya<li>Adobe Substance Designer<li>Adobe Substance Painter<li>Solid Angle Arnold<li>The Foundry Nuke</ul><strong class=padding-left-10>3rd Party Assets:</strong><ul><li>Abandoned Workshop - Sergej Majboroda, &nbsp;<a href=https://hdrihaven.com/ target=_blank class=w3-teal-color>HDRI Haven</a><li>Tokyo BigSight - &nbsp;<a href=http://www.hdrlabs.com/ target=_blank class=w3-teal-color>HDRI Labs</a><li>Official RenderMan Swatch - &nbsp;<a href=https://renderman.pixar.com/official-swatch target=_blank class=w3-teal-color>Pixar Renderman Resources</a></ul><hr><footer class="w3-container w3-padding-32 w3-dark-grey full-width pull-bottom"><p>All content on this page is displayed for preview purposes only. Please allow the video some time to load.</footer></div><script>let head = document.getElementsByTagName("head")[0];
+    let body = document.getElementsByTagName("body")[0];
+    // preparing templates
+    let scriptTemplate = document.createElement("SCRIPT");
+    scriptTemplate.setAttribute("type", "text/javascript");
+    let stylesheetTemplate = document.createElement("LINK");
+    stylesheetTemplate.setAttribute("rel", "stylesheet");
+    // gererage random version as a query param
+    let addRandomQueryParam = function () {
+      return "?v=" + Math.round(Math.random() * 1000000);
+    }
+    // dynamically add JS script
+    let addScript = function (path) {
+      let newScript = scriptTemplate.cloneNode();
+      newScript.setAttribute("src", path + addRandomQueryParam());
+      body.appendChild(newScript);
+    }
+    // dynamically add CSS file
+    let addStylesheet = function (path) {
+      let newStylesheet = stylesheetTemplate.cloneNode();
+      newStylesheet.setAttribute("href", path + addRandomQueryParam());
+      head.appendChild(newStylesheet);
+    }
+    // load required files, in specifig order => bundle -> config -> video
+    addScript("../assets/scripts/nkportfolio.bundle.min.js");
+    let getConfig = function (path) {
+      (typeof nk != "undefined") ? addScript(path) : setTimeout(function () { getConfig(path) }, 50);
+    }
+    getConfig("../assets/config/demoreel.config.min.js")
+    addStylesheet("../../assets/styles/nkportfolio.bundle.min.css");
+
+    // wait for JS to download, then render menu
+    let checkAndLoadMenu = function (pageName) {
+      (typeof (nk) != "undefined" && nk.loadMenu && nk.pageData) ? nk.loadMenu(pageName) : setTimeout(function () { checkAndLoadMenu(pageName) }, 50);
+    }
+    checkAndLoadMenu('demoreel');</script>
